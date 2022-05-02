@@ -1,10 +1,13 @@
 <template>
   <div class="w-full h-screen overflow-y-auto flex flex-col">
-    <AppLayoutHeader />
+    <AppLayoutHeader @changeSidebarWide="changeSidebarWide" />
 
     <div class="flex w-full h-screen">
-      <AppLayoutSidebar />
-      <slot class="flex 1" />
+      <AppLayoutSidebar :isSidebarWidest="isSidebarWidest" />
+
+      <div class="flex-1 p-4">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
@@ -21,6 +24,18 @@ export default {
     AppLayoutLinks,
     AppLayoutHeader,
     AppLayoutSidebar,
+  },
+
+  data() {
+    return {
+      isSidebarWidest: false,
+    }
+  },
+  
+  methods: {
+    changeSidebarWide() {
+      this.isSidebarWidest = !this.isSidebarWidest
+    }
   },
 }
 </script>
