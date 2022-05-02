@@ -1,6 +1,5 @@
 <template>
   <div>
-    <header class="bg-red-500 h-10" />
     <AppLayoutLinks />
     <slot />
   </div>

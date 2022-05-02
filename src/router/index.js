@@ -5,17 +5,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
-    meta: {
-      layout: 'AppLayoutHome'
-    }
   },
   {
     path: '/about',
     name: 'About',
     component: () => import('@/views/About.vue'),
-    meta: {
-      layout: 'AppLayoutAbout'
-    }
   },
   {
     path: '/contacts',

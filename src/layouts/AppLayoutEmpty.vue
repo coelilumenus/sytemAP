@@ -1,6 +1,5 @@
 <template>
   <div>
-    <header class="bg-blue-500 h-10" />
     <AppLayoutLinks />
     <slot />
   </div>
@@ -8,9 +7,8 @@
 
 <script>
 import AppLayoutLinks from "@/layouts/AppLayoutLinks.vue"
-
 export default {
-  name: "AppLayoutHome",
+  name: "AppLayoutEmpty",
   
   components: {
     AppLayoutLinks,
