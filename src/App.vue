@@ -1,21 +1,20 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '@/components/HelloWorld.vue'
+import { RouterView } from "vue-router"
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div>
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div id="app">
+    <AppLayout>
+      <router-view />
+    </AppLayout>
+  </div>
 </template>
+
+<script>
+import AppLayout from "@/layouts/AppLayout.vue"
+
+export default {
+  name: "App",
+  components: { AppLayout },
+}
+</script>

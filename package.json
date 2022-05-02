@@ -2,8 +2,9 @@
   "name": "systemap",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "lint": "vue-cli-service lint",
+    "dev": "vite",
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
@@ -13,8 +14,14 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/cli-plugin-eslint": "^4.5.17",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "autoprefixer": "^10.4.6",
+    "eslint": "^8.14.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
     "postcss": "^8.4.13",
+    "prettier": "^2.2.1",
     "tailwindcss": "^3.0.24",
     "vite": "^2.9.5"
   }
