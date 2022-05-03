@@ -7,14 +7,22 @@ const routes = [
     component: () => import('@/views/Home.vue'),
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/About.vue'),
-  },
-  {
-    path: '/contacts',
-    name: 'Contacts',
-    component: () => import('@/views/Contacts.vue')
+    path: '/finance',
+    name: 'Finance',
+    
+    component: () => import('@/views/Finance.vue'),
+
+    meta: {
+      extraLayout: 'AppLayoutFinance'
+    },
+
+    children: [
+      {
+        path: 'operations',
+        name: 'Operations',
+        component: () => import('@/views/Operations.vue'),
+      },
+    ]
   }
 ]
 

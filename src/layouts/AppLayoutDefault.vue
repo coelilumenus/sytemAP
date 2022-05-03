@@ -1,30 +1,32 @@
 <template>
   <div class="w-full h-screen overflow-y-auto flex flex-col">
-    <AppLayoutHeader @changeSidebarWide="changeSidebarWide" />
+    <LayoutHeader @changeSidebarWide="changeSidebarWide" />
 
     <div class="flex w-full h-screen">
-      <AppLayoutSidebar :isSidebarWidest="isSidebarWidest" />
+      <LayoutSidebar :isSidebarWidest="isSidebarWidest" />
 
-      <div class="flex-1 p-4">
-        <slot />
-      </div>
+      <AppLayoutExtra>
+        <div class="flex-1 p-4">
+          <slot />
+        </div>
+      </AppLayoutExtra>
     </div>
   </div>
 </template>
 
 <script>
-import AppLayoutLinks from "@/layouts/AppLayoutLinks.vue"
-import AppLayoutHeader from "@/components/AppLayoutHeader.vue"
-import AppLayoutSidebar from "@/components/AppLayoutSidebar.vue"
+import LayoutHeader from "@/components/LayoutHeader.vue"
+import LayoutSidebar from "@/components/LayoutSidebar.vue"
+import AppLayoutExtra from "@/layouts/AppLayoutExtra.vue"
 
 export default {
   name: "AppLayoutDefault",
 
   components: {
-    AppLayoutLinks,
-    AppLayoutHeader,
-    AppLayoutSidebar,
-  },
+    LayoutHeader,
+    LayoutSidebar,
+    AppLayoutExtra
+},
 
   data() {
     return {
