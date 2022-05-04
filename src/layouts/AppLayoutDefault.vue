@@ -5,19 +5,16 @@
     <div class="flex w-full h-screen">
       <LayoutSidebar :isSidebarWidest="isSidebarWidest" />
 
-      <AppLayoutExtra>
-        <div class="flex-1 p-4">
-          <slot />
-        </div>
-      </AppLayoutExtra>
+      <div class="flex-1 h-full">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import LayoutHeader from "@/components/LayoutHeader.vue"
-import LayoutSidebar from "@/components/LayoutSidebar.vue"
-import AppLayoutExtra from "@/layouts/AppLayoutExtra.vue"
+import LayoutHeader from "@/components/layout/LayoutHeader.vue";
+import LayoutSidebar from "@/components/layout/LayoutSidebar.vue";
 
 export default {
   name: "AppLayoutDefault",
@@ -25,19 +22,18 @@ export default {
   components: {
     LayoutHeader,
     LayoutSidebar,
-    AppLayoutExtra
-},
+  },
 
   data() {
     return {
       isSidebarWidest: false,
-    }
+    };
   },
-  
+
   methods: {
     changeSidebarWide() {
-      this.isSidebarWidest = !this.isSidebarWidest
-    }
+      this.isSidebarWidest = !this.isSidebarWidest;
+    },
   },
-}
+};
 </script>

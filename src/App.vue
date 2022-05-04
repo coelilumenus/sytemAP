@@ -4,9 +4,9 @@ import { RouterView } from "vue-router"
 
 <template>
   <div id="app">
-    <AppLayout>
+    <app-layout>
       <router-view />
-    </AppLayout>
+    </app-layout>
   </div>
 </template>
 

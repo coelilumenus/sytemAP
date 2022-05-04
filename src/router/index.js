@@ -8,18 +8,13 @@ const routes = [
   },
   {
     path: '/finance',
-    name: 'Finance',
-    
+    name: 'finance',
     component: () => import('@/views/Finance.vue'),
-
-    meta: {
-      extraLayout: 'AppLayoutFinance'
-    },
 
     children: [
       {
         path: 'operations',
-        name: 'Operations',
+        name: 'operations',
         component: () => import('@/views/Operations.vue'),
       },
     ]
