@@ -4,6 +4,14 @@
     :class="{ 'w-14': !localSidebarLarge, 'w-36': localSidebarLarge }"
   >
     <router-link
+      :to="{name: 'financeDashboard'}"
+      class="flex items-center pl-2 rounded-md hover:text-blue-400 active:bg-blue-200 min-w-10 h-10 text-gray-500 font-medium"
+    >
+      <IconDashboard class="fill-current" />
+      <span v-show="localSidebarLarge" class="ml-1"> Главная </span>
+    </router-link>
+
+    <router-link
       :to="{name: 'financeOperations'}"
       class="flex items-center pl-2 rounded-md hover:text-blue-400 active:bg-blue-200 min-w-10 h-10 text-gray-500 font-medium"
     >
@@ -38,16 +46,19 @@
 
 <script>
 import IconMenu from "@/assets/icons/menu.svg";
-import IconOperations from "@/assets/icons/currencyExchange.svg";
+import IconOperations from "@/assets/icons/balance.svg";
 import IconReport from "@/assets/icons/monitoring.svg";
 import IconCategory from "@/assets/icons/category.svg";
+import IconDashboard from "@/assets/icons/dashboard.svg";
+
 
 export default {
   components: {
     IconMenu,
     IconOperations,
     IconReport,
-    IconCategory
+    IconCategory,
+    IconDashboard
   },
 
   props: {
