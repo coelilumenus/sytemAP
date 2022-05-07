@@ -9,9 +9,15 @@ const routes = [
   {
     path: '/finance',
     name: 'finance',
-    component: () => import('@/views/finance/Finance.vue'),
+    component: () => import('@/views/finance/index.vue'),
+    redirect: '/finance/dashboard',
 
     children: [
+      {
+        path: 'dashboard',
+        name: 'financeDashboard',
+        component: () => import('@/views/finance/Dashboard.vue'),
+      },
       {
         path: 'operations',
         name: 'financeOperations',

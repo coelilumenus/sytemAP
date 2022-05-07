@@ -12,7 +12,7 @@
 import FinanceSidebar from "@/components/finance/FinanceSidebar.vue"
 
 export default {
-  name: 'Finance',
+  name: 'FinanceIndex',
 
   components: {
     FinanceSidebar
