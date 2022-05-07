@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-blue-500">
+  <div class="p-4">
     <h1>This is an operations page</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Operations'
+  name: 'FinanceOperations'
 }
 </script>

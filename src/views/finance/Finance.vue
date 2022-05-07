@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import FinanceSidebar from "../components/finance/FinanceSidebar.vue"
+import FinanceSidebar from "@/components/finance/FinanceSidebar.vue"
 
 export default {
   name: 'Finance',

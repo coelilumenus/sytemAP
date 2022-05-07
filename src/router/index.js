@@ -9,13 +9,23 @@ const routes = [
   {
     path: '/finance',
     name: 'finance',
-    component: () => import('@/views/Finance.vue'),
+    component: () => import('@/views/finance/Finance.vue'),
 
     children: [
       {
         path: 'operations',
-        name: 'operations',
-        component: () => import('@/views/Operations.vue'),
+        name: 'financeOperations',
+        component: () => import('@/views/finance/Operations.vue'),
+      },
+      {
+        path: 'categories',
+        name: 'financeCategories',
+        component: () => import('@/views/finance/Categories.vue'),
+      },
+      {
+        path: 'report',
+        name: 'financeReport',
+        component: () => import('@/views/finance/Report.vue'),
       },
     ]
   }
