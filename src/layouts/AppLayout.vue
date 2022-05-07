@@ -1,3 +1,5 @@
+/* @vite-ignore */
+
 <template>
   <component :is="layout">
     <slot />

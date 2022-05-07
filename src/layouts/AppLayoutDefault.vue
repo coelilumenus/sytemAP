@@ -1,9 +1,9 @@
 <template>
   <div class="w-full h-screen overflow-y-auto flex flex-col">
-    <LayoutHeader @changeSidebarWide="changeSidebarWide" />
+    <LayoutHeader />
 
     <div class="flex w-full h-screen">
-      <LayoutSidebar :isSidebarWidest="isSidebarWidest" />
+      <LayoutSidebar />
 
       <div class="flex-1 h-full">
         <slot />
@@ -24,16 +24,8 @@ export default {
     LayoutSidebar,
   },
 
-  data() {
-    return {
-      isSidebarWidest: false,
-    };
-  },
+  data() {},
 
-  methods: {
-    changeSidebarWide() {
-      this.isSidebarWidest = !this.isSidebarWidest;
-    },
-  },
+  methods: {},
 };
 </script>
