@@ -37,9 +37,10 @@
 
     <s-button
       class="flex justify-center items-center mt-auto w-10 h-10"
+      type="primary"
       @click="handleChangeLarge"
     >
-      <IconMenu class="fill-current text-gray-500 font-medium" />
+      <IconMenu class="fill-current font-medium" />
     </s-button>
   </div>
 </template>
