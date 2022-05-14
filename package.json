@@ -8,6 +8,7 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "tailwind": "^4.0.0",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
