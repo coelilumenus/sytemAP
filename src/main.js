@@ -7,7 +7,7 @@ const app = createApp(App)
 app.use(router)
 app.mount('#app')
 
-import SButton from './ui/SButton/SButton.vue'
+import SButton from './ui/SButton.vue'
 app.component('SButton', SButton)
 
 
