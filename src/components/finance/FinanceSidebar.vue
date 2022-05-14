@@ -4,7 +4,7 @@
     :class="{ 'w-14': !localSidebarLarge, 'w-36': localSidebarLarge }"
   >
     <router-link
-      :to="{name: 'financeDashboard'}"
+      :to="{ name: 'financeDashboard' }"
       class="flex items-center pl-2 rounded-md hover:text-blue-400 active:bg-blue-50 min-w-10 h-10"
     >
       <IconDashboard class="fill-current" />
@@ -12,7 +12,7 @@
     </router-link>
 
     <router-link
-      :to="{name: 'financeOperations'}"
+      :to="{ name: 'financeOperations' }"
       class="flex items-center pl-2 rounded-md hover:text-blue-400 active:bg-blue-50 min-w-10 h-10"
     >
       <IconOperations class="fill-current" />
@@ -20,7 +20,7 @@
     </router-link>
 
     <router-link
-      :to="{name: 'financeReport'}"
+      :to="{ name: 'financeReport' }"
       class="flex items-center pl-2 rounded-md hover:text-blue-400 active:bg-blue-50 min-w-10 h-10"
     >
       <IconReport class="fill-current" />
@@ -28,29 +28,25 @@
     </router-link>
 
     <router-link
-      :to="{name: 'financeCategories'}"
+      :to="{ name: 'financeCategories' }"
       class="flex items-center pl-2 rounded-md hover:text-blue-400 active:bg-blue-50 min-w-10 h-10"
     >
       <IconCategory class="fill-current" />
       <span v-show="localSidebarLarge" class="ml-1"> Категории </span>
     </router-link>
 
-    <s-button
-      class="flex justify-center items-center mt-auto w-10 h-10"
-      @click="handleChangeLarge"
-    >
+    <s-button class="flex justify-center items-center mt-auto w-10 h-10" @click="handleChangeLarge">
       <IconMenu class="fill-current font-medium" />
     </s-button>
   </div>
 </template>
 
 <script>
-import IconMenu from "@/assets/icons/menu.svg";
-import IconOperations from "@/assets/icons/balance.svg";
-import IconReport from "@/assets/icons/monitoring.svg";
-import IconCategory from "@/assets/icons/category.svg";
-import IconDashboard from "@/assets/icons/dashboard.svg";
-
+import IconMenu from "@/assets/icons/menu.svg"
+import IconOperations from "@/assets/icons/balance.svg"
+import IconReport from "@/assets/icons/monitoring.svg"
+import IconCategory from "@/assets/icons/category.svg"
+import IconDashboard from "@/assets/icons/dashboard.svg"
 
 export default {
   components: {
@@ -58,7 +54,7 @@ export default {
     IconOperations,
     IconReport,
     IconCategory,
-    IconDashboard
+    IconDashboard,
   },
 
   props: {
@@ -71,13 +67,13 @@ export default {
   data() {
     return {
       localSidebarLarge: this.isSidebarLarge,
-    };
+    }
   },
 
   methods: {
     handleChangeLarge() {
-      this.localSidebarLarge = !this.localSidebarLarge;
+      this.localSidebarLarge = !this.localSidebarLarge
     },
   },
-};
+}
 </script>
