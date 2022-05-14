@@ -10,4 +10,7 @@ app.mount('#app')
 import SButton from './ui/SButton.vue'
 app.component('SButton', SButton)
 
+import SInput from './ui/SInput.vue'
+app.component('SInput', SInput)
+
 
