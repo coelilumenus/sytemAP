@@ -13,7 +13,7 @@ export default {
   name: 'AppLayout',
   
   data: () => ({
-    layout: AppLayoutDefault
+    layout: 'AppLayoutDefault'
   }),
   
   watch: {
