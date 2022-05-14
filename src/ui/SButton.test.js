@@ -13,7 +13,7 @@ describe("button", async () => {
     const wrapper = mount(SButton)
 
     expect(wrapper.find("button").classes().join(" ")).toBe(
-      "rounded-md text-gray-500 hover:border-2 border-blue-300 active:bg-blue-300"
+      "rounded-md p-1 border-2 border-opacity-0 text-gray-500 hover:border-opacity-100 border-blue-300 active:bg-blue-300"
     )
   })
 
@@ -25,7 +25,7 @@ describe("button", async () => {
     })
 
     expect(wrapper.find("button").classes().join(" ")).toBe(
-      "rounded-md text-gray-500 hover:border-2 border-blue-300 active:bg-blue-300"
+      "rounded-md p-1 border-2 border-opacity-0 text-gray-500 hover:border-opacity-100 border-blue-300 active:bg-blue-300"
     )
   })
   
@@ -38,7 +38,7 @@ describe("button", async () => {
     })
 
     expect(wrapper.find("button").classes().join(" ")).toBe(
-      "rounded-md bg-gray-200 text-gray-400 cursor-not-allowed"
+      "rounded-md p-1 border-2 border-opacity-0 bg-gray-200 text-gray-400 cursor-not-allowed"
     )
   })
   
@@ -50,7 +50,7 @@ describe("button", async () => {
     })
 
     expect(wrapper.find("button").classes().join(" ")).toBe(
-      "rounded-md bg-gray-200 text-gray-400 cursor-not-allowed"
+      "rounded-md p-1 border-2 border-opacity-0 bg-gray-200 text-gray-400 cursor-not-allowed"
     )
   })
 })

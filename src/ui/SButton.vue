@@ -1,6 +1,6 @@
 <template>
   <button
-    class="rounded-md"
+    class="rounded-md p-1 border-2 border-opacity-0"
     :class="buttonClass"
     :disabled="disabled"
   >
@@ -29,10 +29,10 @@ export default {
       
       switch(this.type) {
         case 'primary':
-          return 'text-white bg-blue-300 active:bg-blue-400 hover:border-2 border-blue-200'
+          return 'text-white bg-blue-400 active:bg-blue-500 hover:border-opacity-100 border-blue-200'
         
         default: 
-          return 'text-gray-500 hover:border-2 border-blue-300 active:bg-blue-300'
+          return 'text-gray-500 hover:border-opacity-100 border-blue-300 active:bg-blue-300'
       }
     }
   }
